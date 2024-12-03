@@ -4,10 +4,10 @@ import random
 # Título de la aplicación
 st.title("Desafíos de Probabilidad: ¡Diviértete Aprendiendo! 🎮🕹️👾")
 
-import streamlit as st
+
 
 # Título de la aplicación
-st.header("Ejercicio de Probabilidad: Lanzamiento de dos monedas 🪙")
+st.header("Ejercicio de Probabilidad: Lanzamiento de dos monedas 🥮")
 with st.container(border=True):
     c1, c2 = st.columns(2, vertical_alignment="center")
     with c1:
@@ -135,4 +135,5 @@ st.write("""
 
 """)
 
-   
+
+
