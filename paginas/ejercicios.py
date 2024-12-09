@@ -60,10 +60,10 @@ respuesta_c = st.text_input("Ingresa tu respuesta (por ejemplo, 1/4 o 0.25):")
 
 if respuesta_c:
     # Respuesta correcta
-    if respuesta_c == "2/4" or respuesta_c == "0.5":
+    if respuesta_c == "2/4" or respuesta_c == "0.5" or respuesta_c == "1/2":
         st.write("¡Correcto! 🎉 La probabilidad de que salga una cara y una cruz es 2/4 (o 0.5).")
     else:
-        st.write("Respuesta incorrecta. La probabilidad es 2/4 (o 0.5).")
+        st.write("Respuesta incorrecta. La probabilidad es 1/2 (o 0.5).")
 
 # Explicación adicional
 st.write("""
@@ -111,11 +111,11 @@ if respuesta_a:
     else:
         st.write("Respuesta incorrecta. La probabilidad es 0.5 o 11/22.")
 
-# Ejercicio B: Probabilidad de que no sea blanca
-st.subheader("B) ¿Cuál es la probabilidad de que no sea amarilla?")
+# Ejercicio B: Probabilidad de que no sea amarilla
+st.subheader("B) ¿Cuál es la probabilidad de que la bola no sea amarilla?")
 
 # Preguntar al usuario por su respuesta
-respuesta_b = st.text_input("Ingresa tu respuesta (por ejemplo, 5/15 o 0.333):")
+respuesta_b = st.text_input("Ingresa tu respuesta (por ejemplo, 5/15 o 0.333):", key=1)
 
 if respuesta_b:
     # Respuesta correcta
@@ -124,7 +124,19 @@ if respuesta_b:
     else:
         st.write("Respuesta incorrecta. La probabilidad es 0.77 o 17/22.")
     
+# Ejercicio C: Probabilidad de que sea azul 
+st.subheader("C) ¿Cuál es la probabilidad de que la bola sea azul?")
 
+# Preguntar al usuario por su respuesta
+respuesta_c = st.text_input("Ingresa tu respuesta (por ejemplo, 5/15 o 0.333):", key=2)
+
+if respuesta_c:
+    # Respuesta correcta
+    if respuesta_c == "2/11" or respuesta_c == "0.18" or respuesta_c == "4/22":
+        st.write("¡Correcto! 🎉 La probabilidad de que sea azul es 0.18 o 2/11.")
+    else:
+        st.write("Respuesta incorrecta. La probabilidad es 0.18 o 2/11.")
+    
 # Explicación adicional
 st.write("""
 **Explicación:**

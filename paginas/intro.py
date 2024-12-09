@@ -33,16 +33,24 @@ st.markdown('Esto significa que hay un 50% de probabilidad de que salga un núme
 st.markdown('__✧ Eventos mutuamente excluyentes:__ Son aquellos que no pueden ocurrir al mismo tiempo. Por ejemplo, al lanzar un dado, los eventos de "sacar un 3" y "sacar un 5" son mutuamente excluyentes, porque no puedes obtener ambos números al mismo tiempo.')
 st.markdown('__✧ Eventos Independientes:__ Dos eventos son independientes si la ocurrencia de uno no afecta la probabilidad de que ocurra el otro. Por ejemplo, al lanzar una moneda y un dado al mismo tiempo, los eventos "salir cara" en la moneda y "salir 4" en el dado son independientes.')
 st.subheader("3. Reglas Básicas de la Probabilidad")
+
+
 st.markdown('__✧ Regla de la Suma para eventos mutuamente excluyentes:__ Si los eventos A y B son mutuamente excluyentes, la probabilidad de que ocurra uno u otro es la suma de sus probabilidades individuales:')
 st.latex(r'P(A \cup B) = P(A) + P(B)')
+
+
 st.markdown('__✧ Regla del Producto para eventos independientes:__ Si los eventos A y B son independientes, la probabilidad de que ambos ocurran es el producto de sus probabilidades individuales:')
 st.latex(r'P(A \cap B) = P(A) \times P(B)')
 st.subheader('Ejemplo de Cálculos Básicos de Probabilidad:')
+
+
 st.markdown('+ __Lanzar un dado__')
 st.markdown('¿Cuál es la probabilidad de que salga un número mayor que 4?')
 st.markdown('El espacio muestral es: __{1,2,3,4,5,6}__ Los resultados favorables son: __{5,6}__')
 st.markdown('Entonces:')
 st.latex(r'P(\text{número mayor que 4}) = \frac{3}{6} = \frac{1}{2} \approx 0.3333')
+
+
 st.markdown('+ __Lanzar una moneda__')
 st.markdown('¿Cuál es la probabilidad de obtener "cara"?')
 st.markdown('El espacio muestral es: __{cara,cruz}__ El número de resultados favorables es 1 (cara).')
