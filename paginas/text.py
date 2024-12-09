@@ -1,82 +1,102 @@
 import streamlit as st
 
-# Definimos las preguntas, las opciones y las respuestas correctas
+# Título
+st.title("Examen de Probabilidad 📃🧠📚✍🏼")
+
+st.write("""
+Bienvenido al examen de cálculo de probabilidades. Responde las preguntas y al finalizar, obtendrás tu calificación.
+""")
+
+# Preguntas del examen
 preguntas = [
     {
-        "pregunta": "¿Cuál es la probabilidad de que salga un número par al lanzar un dado de seis caras?",
-        "opciones": ["1/6", "1/3", "1/2", "2/3"],
-        "respuesta_correcta": "1/2"
+        "pregunta": "1. ¿Cuál de los siguientes experimentos no es aleatorio?",
+        "opciones": [
+            "A) Observar un semáforo y ver si está en rojo.",
+            "B) En una carrera de caballos, que gane el caballo Emperador.",
+            "C) La cantidad de pasajeros que se bajan en una estación de metro.",
+            "D) Pulsar un interruptor y que se encienda la luz."
+        ],
+        "respuesta_correcta": "D"
     },
     {
-        "pregunta": "Si tenemos una bolsa con 3 bolas rojas y 5 bolas azules, ¿cuál es la probabilidad de sacar una bola roja?",
-        "opciones": ["3/5", "5/8", "3/8", "1/2"],
-        "respuesta_correcta": "3/8"
+        "pregunta": "2. Se da el conjunto D = {1,2,3,4,5,6,7,8,9}. ¿Cual es la probabilidad de que, al elegir un digito al azar de D, se obtenga un multiplo de 3?",
+        "opciones": ["A) 1/2", "B) 1/3", "C) 1/4", "D) 1/5"],
+        "respuesta_correcta": "B"
     },
     {
-        "pregunta": "En una baraja de 52 cartas, ¿cuál es la probabilidad de sacar un as?",
-        "opciones": ["1/52", "1/13", "1/26", "4/52"],
-        "respuesta_correcta": "1/13"
+        "pregunta": "3. Se elige al azar una ficha de un grupo de ellas en una bolsa negra, numeradas desde el 1 al 15. Si todas las fichas tienen la misma forma y tamaño ¿cual es la probabilidad de que laficha extraida contenga un numero que es multiplo de 2?",
+        "opciones": ["A) 1/15", "B) 2/15", "C) 7/15", "D) 8/15"],
+        "respuesta_correcta": "C"
     },
     {
-        "pregunta": "En una urna con 5 bolas rojas y 3 bolas verdes, ¿cuál es la probabilidad de sacar una bola verde?",
-        "opciones": ["5/8", "3/8", "3/5", "8/3"],
-        "respuesta_correcta": "3/8"
+        "pregunta": "4. En una urna hay 14 fichas en total, de colores blanco, rojo y negro. Si hay 5 fichas blancas y la probabilidad de sacar una ficha blanca o negra es 4/7, entonces, ¿Cuantas fichas son negras?",
+        "opciones": ["A) 2", "B) 3", "C) 4", "D) 5"],
+        "respuesta_correcta": "B"
     },
     {
-        "pregunta": "Si lanzo una moneda 3 veces, ¿cuál es la probabilidad de obtener exactamente 2 caras?",
-        "opciones": ["1/8", "3/8", "1/2", "1/4"],
-        "respuesta_correcta": "3/8"
+        "pregunta": "5. Se tienen dos cajas, una con 4 bolas blancas y 2 negras y la otra con 3 blancas y 5 negras. Si se saca una bola de cada caja. ¿Cual es la probabilidad de que ambas sean blancas?",
+        "opciones": ["A) 1/6", "B) 1/5", "C) 1/4", "D) 3/4"],
+        "respuesta_correcta": "C"
     },
     {
-        "pregunta": "Si un dado se lanza 2 veces, ¿cuál es la probabilidad de que la suma de los dos dados sea 7?",
-        "opciones": ["1/6", "1/36", "5/36", "1/12"],
-        "respuesta_correcta": "1/6"
+        "pregunta": "6. Al lanzar un dado, la probabilidad de que el resultado sea impar o primo es:",
+        "opciones": ["A) 1", "B) 2/3", "C) 2/5", "D) 3/5"],
+        "respuesta_correcta": "B"
     },
     {
-        "pregunta": "En una urna con 4 bolas rojas, 6 bolas verdes y 10 bolas azules, ¿cuál es la probabilidad de sacar una bola azul?",
-        "opciones": ["10/20", "4/10", "6/20", "10/30"],
-        "respuesta_correcta": "10/20"
+        "pregunta": "7. Se lanzan tres monedas. ¿Cual es la probabilidad de obtener dos sellos y una cara?",
+        "opciones": ["A) 3/4", "B) 5/8", "C) 1/2", "D) 3/8"],
+        "respuesta_correcta": "D"
     },
     {
-        "pregunta": "¿Cuál es la probabilidad de sacar un número mayor que 4 en un dado de seis caras?",
-        "opciones": ["2/6", "1/3", "1/2", "1/6"],
-        "respuesta_correcta": "2/6"
+        "pregunta": "8. Se elige al azar un numero entero positivo de dos digitos. ¿Cual es la probabilidad de queen el numero elegido, sus digitos sumen 10?",
+        "opciones": ["A) 1/100", "B) 9/100", "C) 1/10", "D) 1/9"],
+        "respuesta_correcta": "C"
     },
     {
-        "pregunta": "En un experimento de lanzar una moneda y un dado, ¿cuál es la probabilidad de que salga cara y el dado muestre un número impar?",
-        "opciones": ["1/12", "1/6", "1/4", "1/3"],
-        "respuesta_correcta": "1/4"
+        "pregunta": "9. Un jugador de futbol tiene tres oportunidades de hacer goles de penal. Si la probabilidad deque no acierte es 0.2, entonces la probabilidad de que acierte los tres penales es:",
+        "opciones": ["A) 1/5", "B) 1/125", "C) 0,04", "D) 0,512"],
+        "respuesta_correcta": "D"
     },
     {
-        "pregunta": "Si un dado se lanza, ¿cuál es la probabilidad de que salga un número menor que 3?",
-        "opciones": ["2/6", "1/3", "1/6", "1/2"],
-        "respuesta_correcta": "2/6"
-    }
+        "pregunta": "10. En una oficina trabajan 8 hombres y 6 mujeres. Si se va a elegir una comision formada por tres integrantes, ¿cual es la probabilidad de que este integrada por 2 hombres y una mujer?",
+        "opciones": ["A) 2/13", "B) 6/13", "C) 8/13", "D) 6/49"],
+        "respuesta_correcta": "B"
+    },
+    
 ]
 
-# Función para mostrar el examen y capturar las respuestas
-def mostrar_examen():
-    respuestas_usuario = []
-    for pregunta in preguntas:
-        # Mostramos la pregunta y las opciones como un radio button
-        respuesta = st.radio(pregunta['pregunta'], pregunta['opciones'], key=pregunta['pregunta'])
-        respuestas_usuario.append((pregunta['respuesta_correcta'], respuesta))
-    
-    return respuestas_usuario
+# Variables para almacenar respuestas y calificación
+respuestas_usuario = []
+calificacion = 0
 
-# Función para calcular la puntuación
-def calcular_puntaje(respuestas_usuario):
-    correctas = sum([1 for correcto, respuesta in respuestas_usuario if correcto == respuesta])
-    incorrectas = len(respuestas_usuario) - correctas
-    return correctas, incorrectas
+# Mostrar preguntas al usuario
+st.subheader("Responde las siguientes preguntas:")
 
-# Mostrar el examen
-st.title("Examen de Probabilidad")
-respuestas_usuario = mostrar_examen()
+for i, pregunta in enumerate(preguntas):
+    st.write(pregunta["pregunta"])
+    respuesta = st.radio(f"Pregunta {i+1}", pregunta["opciones"], key=f"pregunta_{i}")
+    respuestas_usuario.append(respuesta.split(")")[0])  # Captura solo la letra (A, B, etc.)
 
-# Mostrar botón para calcular puntaje
-if st.button('Calificar'):
-    correctas, incorrectas = calcular_puntaje(respuestas_usuario)
-    st.write(f"Respuestas correctas: {correctas}")
-    st.write(f"Respuestas incorrectas: {incorrectas}")
-    st.write(f"Puntaje: {correctas} de {len(preguntas)}")
+# Botón para calificar
+if st.button("Calificar", key="calificar"):
+    for i, respuesta_usuario in enumerate(respuestas_usuario):
+        correcta = preguntas[i]["respuesta_correcta"]
+        if respuesta_usuario == correcta:
+            calificacion += 1
+        else:
+            st.error(f"Pregunta {i+1}: Incorrecta ❌😔. La respuesta correcta era {correcta}.")
+        
+
+    # Calificación final
+    st.success(f"Tu calificación es {calificacion}/{len(preguntas)}.")
+    if calificacion == len(preguntas):
+        st.balloons()
+        st.write("¡Excelente! 🏆👍🏻😎🤑 Has respondido todo correctamente.")
+    else:
+        st.write("¡Sigue practicando para mejorar tus conocimientos!😄")
+
+
+
+
